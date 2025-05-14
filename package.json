@@ -1,0 +1,30 @@
+{
+  "name": "@l-garavno/adjungo",
+  "version": "0.0.0",
+  "repository": "https://github.com/l-garavno/adjungo.git",
+  "author": "L-Garavno",
+  "description": "...",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "rm -rf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "format": "xo --fix ./src",
+    "check-format": "xo --check ./src"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2",
+    "xo": "^0.60.0"
+  }
+}
